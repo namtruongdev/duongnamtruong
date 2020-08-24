@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://duongnamtruong.com`,
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -22,14 +25,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Duong Nam Truong | Full Stack Developer`,
+        short_name: `Duong Nam Truong`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#02aab0`,
+        theme_color: `#7f449d`,
         display: `standalone`,
         icon: 'src/images/favicon.png',
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: 'UA-123121912-8',
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-netlify`,
+    'gatsby-plugin-offline',
+    `gatsby-plugin-preact`,
   ],
 };
